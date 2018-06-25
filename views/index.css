@@ -1,0 +1,21 @@
+body{
+	background-color: #4256f4;
+}
+
+.navbar{
+	color: white;
+}
+#navbarSupportedContent{
+	float: right;
+}
+
+#login-form{
+	width: 400px;
+	margin: 13% auto;
+	background: white;
+	padding: 20px;
+	text-align: center;
+	border-radius: 30px;
+	box-shadow: 0 0 30px rgba(0, 0 , 0, 0.5);
+
+}

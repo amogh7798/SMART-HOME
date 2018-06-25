@@ -1,0 +1,85 @@
+<HTML>
+  <HEAD>
+    <TITLE>DEVICES</TITLE>
+  </HEAD>
+  <BODY>
+    <style>
+    ul {list-style-type: none;background-color: lightgrey;height:100%;width:25%;position:fixed;padding:0;margin:0;overflow:auto;}
+    li a{display: block;padding:8px 16px;color:black;text-decoration: none;}
+    li a.active {
+    background-color: #4CAF50;
+    color: white;
+    }
+    li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    }
+    body {background-color: lightblue;padding:0;}
+    table {border-radius: 10px;background-color:yellow; color:red;border-style:dashed;}
+    H2 {padding: 25px 100px 100px 125px;text-shadow: 2px 2px 5px red;}
+    .btn {
+    border: dashed;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* On mouse-over */
+.btn:hover {background: #eee;}
+
+.success {color: green;}
+.info {color: dodgerblue;}
+.warning {color: orange;}
+.danger {color: red;}
+.default {color: black;}
+    </style>
+    <ul>
+      <li><a href="../home">HOME</a></li>
+      <li><a class="active">APPLIANCES</a></li>
+      <li><a href="../ondev">ON APP</a></li>
+      <li><a href="../offdev">OFF APP</a></li>
+      <li><a href="../signout">LOG OUT</a></li>
+    </ul>
+    <H2 align="CENTER">SMART HOME</H2>
+    <div style="margin-left=25% ;padding:5%">
+    <TABLE BORDER ="3" ALIGN="CENTER" WIDTH="50%">
+      <TR>
+        <TD>DEVICE</TD>
+        <TD>STATUS</TD>
+      </TR>
+      <TR>
+        <TD>LIGHT ALPHA</TD>
+        <TD>	<% if(message1){ %>
+      			<b> <%=message1 %></b>
+      				<% } %></TD>
+        <TD><a href="../switchA"><button>SWITCH</button></a></TD>
+      </TR>
+      <TR>
+        <TD>LIGHT BETA</TD>
+        <TD><% if(message2){ %>
+      			<b> <%=message2 %></b>
+      				<% } %></TD>
+        <TD><a href="../switchB"><button>SWITCH</button></a></TD>
+      </TR>
+      <TR>
+        <TD>LIGHT DELTA</TD>
+        <TD><% if(message3){ %>
+      			<b> <%=message3 %></b>
+      				<% } %></TD>
+        <TD><a href="../switchC"><button >SWITCH</button></a></TD>
+      </TR>
+    </TABLE>
+  </div>
+  <div style="margin-left=25% ; padding:90px 100px 70px 400px">
+    <% if(message4) { %>
+      <% if(message4=="true") { %>
+         <a href="../emailuncheck"><button class="btn success">EMAIL ALERT IS ACTIVATED</button></a>
+      <% } else { %>
+        <a href="../emailcheck"><button class="btn danger">EMAIL ALERT IS DEACTIVATED</button></a>
+    <% } %>
+    <% } %>
+  </div>
+  </BODY>
+</HTML>
