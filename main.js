@@ -9,8 +9,8 @@ var nodemailer=require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'nocolice@gmail.com',
-    pass: 'nocolice@7'
+    user: 'ENTER EMAIL ID',
+    pass: 'ENTER PASSWORD'
   }
 });
 
@@ -25,12 +25,8 @@ var stateB="";
 var stateC="";
 
 var config = {
-    apiKey: "AIzaSyDaxwNC9CBVjtSdHqyLh5yfxVRbUdxqiV4",
-    authDomain: "smart-home-a64c0.firebaseapp.com",
-    databaseURL: "https://smart-home-a64c0.firebaseio.com",
-    projectId: "smart-home-a64c0",
-    storageBucket: "smart-home-a64c0.appspot.com",
-    messagingSenderId: "739203206631"
+    ..........
+  "AVAILABLE IN FIREBASE CONSOLE"
   };
   firebase.initializeApp(config);
 
@@ -38,29 +34,29 @@ var config = {
 
 var clientA = mqtt.connect('mqtts://io.adafruit.com',{
   port:8883,
-  username: 'amogh7798',
-  password: '53e79f3730314d3c859f4e5057fb5d97'
+  username: 'ENTER USERNAME',
+  password: 'ENTER AIO KEY'
 });
 
 
 
 var clientB = mqtt.connect('mqtts://io.adafruit.com',{
   port:8883,
-  username: 'amogh7798',
-  password: '53e79f3730314d3c859f4e5057fb5d97'
+  username: 'ENTER USERNAME',
+  password: 'ENTER AIO KEY'
 });
 
 
 
 var clientC = mqtt.connect('mqtts://io.adafruit.com',{
   port:8883,
-  username: 'amogh7798',
-  password: '53e79f3730314d3c859f4e5057fb5d97'
+  username: 'ENTER USERNAME',
+  password: 'ENTER AIO KEY'
 });
 
 
 
-var url='mongodb://kabali7:kabali7@ds163300.mlab.com:63300/sh-dev';
+var url='ENTER MONGODB URL';
 var app=express();
 
 
@@ -93,8 +89,8 @@ clientA.on('message',function(topic,message)
   if(result.emailcheck=='true')
   {
     var mailOptions = {
-      from: 'nocolice@gmail.com',
-      to: 'amogh7798@gmail.com',
+      from: 'ENTER FROM ADDRESS',
+      to: 'ENTER TO ADDRESS',
       subject: 'SECURITY ALERT',
       text: 'LIGHT ALPHA WAS TURNED '+ message.toString() + ' at ' + datetime()
     };
